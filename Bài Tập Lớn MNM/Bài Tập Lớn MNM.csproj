@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C3739A4-333B-48DC-8FF0-4758553992EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bài_Tập_Lớn_MNM</RootNamespace>
+    <AssemblyName>Bài Tập Lớn MNM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bang_cham_cong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bang_cham_cong.Designer.cs">
+      <DependentUpon>Bang_cham_cong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bang_luong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bang_luong.Designer.cs">
+      <DependentUpon>Bang_luong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bao_hiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bao_hiem.Designer.cs">
+      <DependentUpon>Bao_hiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bang_cap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bang_cap.Designer.cs">
+      <DependentUpon>Bang_cap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cham_Cong_Va_Luong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cham_Cong_Va_Luong.Designer.cs">
+      <DependentUpon>Cham_Cong_Va_Luong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chung_chi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chung_chi.Designer.cs">
+      <DependentUpon>Chung_chi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cong_tac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cong_tac.Designer.cs">
+      <DependentUpon>Cong_tac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="databasecontrol.cs" />
+    <Compile Include="Giao_Dien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giao_Dien.Designer.cs">
+      <DependentUpon>Giao_Dien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="He_Thong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="He_Thong.Designer.cs">
+      <DependentUpon>He_Thong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hop_dong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hop_dong.Designer.cs">
+      <DependentUpon>Hop_dong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Khen_thuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Khen_thuong.Designer.cs">
+      <DependentUpon>Khen_thuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ky_luat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ky_luat.Designer.cs">
+      <DependentUpon>Ky_luat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phong_ban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phong_ban.Designer.cs">
+      <DependentUpon>Phong_ban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phu_cap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phu_cap.Designer.cs">
+      <DependentUpon>Phu_cap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_Ly_Nghiep_Vu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quan_Ly_Nghiep_Vu.Designer.cs">
+      <DependentUpon>Quan_Ly_Nghiep_Vu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_Ly_Nhan_Su.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quan_Ly_Nhan_Su.Designer.cs">
+      <DependentUpon>Quan_Ly_Nhan_Su.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quan_ly_tai_khoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quan_ly_tai_khoan.Designer.cs">
+      <DependentUpon>Quan_ly_tai_khoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thong_tin_nhan_vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thong_tin_nhan_vien.Designer.cs">
+      <DependentUpon>Thong_tin_nhan_vien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tien_bao_hiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tien_bao_hiem.Designer.cs">
+      <DependentUpon>Tien_bao_hiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TK_cham_cong_luong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TK_cham_cong_luong.Designer.cs">
+      <DependentUpon>TK_cham_cong_luong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TK_nghiep_vu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TK_nghiep_vu.Designer.cs">
+      <DependentUpon>TK_nghiep_vu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TK_nhan_su.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TK_nhan_su.Designer.cs">
+      <DependentUpon>TK_nhan_su.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tim_Kiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tim_Kiem.Designer.cs">
+      <DependentUpon>Tim_Kiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao_tao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dao_tao.Designer.cs">
+      <DependentUpon>Dao_tao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dang_Nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dang_Nhap.Designer.cs">
+      <DependentUpon>Dang_Nhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Doi_mat_khau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doi_mat_khau.Designer.cs">
+      <DependentUpon>Doi_mat_khau.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bang_cham_cong.resx">
+      <DependentUpon>Bang_cham_cong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bang_luong.resx">
+      <DependentUpon>Bang_luong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bao_hiem.resx">
+      <DependentUpon>Bao_hiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bang_cap.resx">
+      <DependentUpon>Bang_cap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cham_Cong_Va_Luong.resx">
+      <DependentUpon>Cham_Cong_Va_Luong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chung_chi.resx">
+      <DependentUpon>Chung_chi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cong_tac.resx">
+      <DependentUpon>Cong_tac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giao_Dien.resx">
+      <DependentUpon>Giao_Dien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="He_Thong.resx">
+      <DependentUpon>He_Thong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hop_dong.resx">
+      <DependentUpon>Hop_dong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Khen_thuong.resx">
+      <DependentUpon>Khen_thuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ky_luat.resx">
+      <DependentUpon>Ky_luat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phong_ban.resx">
+      <DependentUpon>Phong_ban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phu_cap.resx">
+      <DependentUpon>Phu_cap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Quan_Ly_Nghiep_Vu.resx">
+      <DependentUpon>Quan_Ly_Nghiep_Vu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan_Ly_Nhan_Su.resx">
+      <DependentUpon>Quan_Ly_Nhan_Su.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quan_ly_tai_khoan.resx">
+      <DependentUpon>Quan_ly_tai_khoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thong_tin_nhan_vien.resx">
+      <DependentUpon>Thong_tin_nhan_vien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tien_bao_hiem.resx">
+      <DependentUpon>Tien_bao_hiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TK_cham_cong_luong.resx">
+      <DependentUpon>TK_cham_cong_luong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TK_nghiep_vu.resx">
+      <DependentUpon>TK_nghiep_vu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TK_nhan_su.resx">
+      <DependentUpon>TK_nhan_su.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tim_Kiem.resx">
+      <DependentUpon>Tim_Kiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dao_tao.resx">
+      <DependentUpon>Dao_tao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dang_Nhap.resx">
+      <DependentUpon>Dang_Nhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doi_mat_khau.resx">
+      <DependentUpon>Doi_mat_khau.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
