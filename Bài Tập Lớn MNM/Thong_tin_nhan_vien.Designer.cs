@@ -155,6 +155,7 @@
             this.dateTime_NS.Name = "dateTime_NS";
             this.dateTime_NS.Size = new System.Drawing.Size(216, 24);
             this.dateTime_NS.TabIndex = 8;
+            this.dateTime_NS.Value = new System.DateTime(2023, 8, 9, 0, 0, 0, 0);
             // 
             // groupBox1
             // 
@@ -398,6 +399,7 @@
             this.MinimizeBox = false;
             this.Name = "Thong_tin_nhan_vien";
             this.Text = "Thông_tin_nhân_viên";
+            this.Load += new System.EventHandler(this.Thong_tin_nhan_vien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);

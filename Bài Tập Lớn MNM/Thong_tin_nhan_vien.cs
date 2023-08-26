@@ -46,7 +46,7 @@ namespace Bài_Tập_Lớn_MNM
             String ten = txt_Ten.Text;
             int id = Convert.ToInt32(txt_MNV.Text);
             String gioitinh = txt_GT.Text;
-            DateTime ngaySinh = dateTime_NS.Value;
+            String ngaySinh = dateTime_NS.Value.ToShortDateString();
             String CCCD = txt_CCCD.Text;
             String DT = txt_SDT.Text;
             String chucvu = txt_CV.Text;
@@ -154,6 +154,11 @@ namespace Bài_Tập_Lớn_MNM
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
+        }
+
+        private void Thong_tin_nhan_vien_Load(object sender, EventArgs e)
+        {
+            data_show();
         }
     }
 }

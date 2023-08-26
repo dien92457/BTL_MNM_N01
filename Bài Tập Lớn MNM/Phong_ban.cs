@@ -121,7 +121,7 @@ namespace Bài_Tập_Lớn_MNM
         private void Phong_ban_Load(object sender, EventArgs e)
         {
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            data_show();
         }
     }
     

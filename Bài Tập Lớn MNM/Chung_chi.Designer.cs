@@ -33,6 +33,7 @@
             this.BTN_insert = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTime_TH = new System.Windows.Forms.DateTimePicker();
             this.dateTime_NC = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_NC = new System.Windows.Forms.TextBox();
@@ -43,7 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BTN_reset = new System.Windows.Forms.Button();
-            this.dateTime_TH = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -119,13 +121,27 @@
             this.groupBox1.Text = "Chứng chỉ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // dateTime_TH
+            // 
+            this.dateTime_TH.CustomFormat = "yyyy";
+            this.dateTime_TH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTime_TH.Location = new System.Drawing.Point(129, 151);
+            this.dateTime_TH.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTime_TH.Name = "dateTime_TH";
+            this.dateTime_TH.ShowUpDown = true;
+            this.dateTime_TH.Size = new System.Drawing.Size(242, 24);
+            this.dateTime_TH.TabIndex = 9;
+            // 
             // dateTime_NC
             // 
+            this.dateTime_NC.CustomFormat = "dd/MM/yy";
+            this.dateTime_NC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTime_NC.Location = new System.Drawing.Point(129, 123);
             this.dateTime_NC.Margin = new System.Windows.Forms.Padding(2);
             this.dateTime_NC.Name = "dateTime_NC";
             this.dateTime_NC.Size = new System.Drawing.Size(242, 24);
             this.dateTime_NC.TabIndex = 9;
+            this.dateTime_NC.Value = new System.DateTime(2023, 8, 25, 0, 0, 0, 0);
             // 
             // label5
             // 
@@ -213,16 +229,21 @@
             this.BTN_reset.UseVisualStyleBackColor = true;
             this.BTN_reset.Click += new System.EventHandler(this.BTN_reset_Click);
             // 
-            // dateTime_TH
+            // textBox1
             // 
-            this.dateTime_TH.CustomFormat = "yyyy";
-            this.dateTime_TH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTime_TH.Location = new System.Drawing.Point(129, 151);
-            this.dateTime_TH.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTime_TH.Name = "dateTime_TH";
-            this.dateTime_TH.ShowUpDown = true;
-            this.dateTime_TH.Size = new System.Drawing.Size(242, 24);
-            this.dateTime_TH.TabIndex = 9;
+            this.textBox1.Location = new System.Drawing.Point(188, 233);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 20);
+            this.textBox1.TabIndex = 14;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(336, 236);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(120, 20);
+            this.textBox2.TabIndex = 15;
             // 
             // Chung_chi
             // 
@@ -230,6 +251,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(652, 484);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.BTN_update);
             this.Controls.Add(this.BTN_reset);
             this.Controls.Add(this.BTN_delete);
@@ -244,6 +267,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -265,5 +289,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button BTN_reset;
         private System.Windows.Forms.DateTimePicker dateTime_TH;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
