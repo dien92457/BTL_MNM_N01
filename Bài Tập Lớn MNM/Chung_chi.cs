@@ -38,23 +38,24 @@ namespace Bài_Tập_Lớn_MNM
 
         private void BTN_insert_Click(object sender, EventArgs e)
         {
-            string ten = txt_NC.Text;
+            String ten = txt_NC.Text;
             int id = Convert.ToInt32(txt_MNV.Text);
             int MCC = Convert.ToInt32(txt_MCC.Text);
-            //string th = dateTime_TH.Value.ToString();
-            //string nc = dateTime_NC.Value.Year.ToString();
-            string th = dateTime_TH.Value.ToShortDateString();
-            string nc = dateTime_NC.Value.Year.ToString();
+            String nc = dateTime_NC.Value.ToShortDateString();
+            String th = dateTime_TH.Value.Year.ToString();
+
+
+
             databasecontrol dataprovide = new databasecontrol();
             string query = "SELECT * FROM NhanVien where MaNhanVien = @id ";
-            if (dataprovide.ExecuteQuery(query, new object[] {id}).Rows.Count > 0)
+            if (dataprovide.ExecuteQuery(query, new object[] { id }).Rows.Count > 0)
             {
-                string query1 = "INSERT INTO ChungChi ( MaChungChi , MaNhanVien , TenChungChi , NgayCap , ThoiHan ) VALUES ( @MCC , @id , @ten , @nc, @th );";
-                dataprovide.ExecuteNonQuery(query1, new object[] { MCC, id, txt_NC.Text, nc, th });
-                this.data_show();   
+                string query1 = "INSERT INTO ChungChi ( MaChungChi, MaNhanVien , TenChungChi , NgayCap , ThoiHan) VALUES ( @MCC , @id , @ten , @nc , @th );";
+                dataprovide.ExecuteNonQuery(query1, new object[] { MCC, id, ten, nc , th });
+                this.data_show();
             }
             else MessageBox.Show("Mã nhân viên không tồn tại");
-            
+
         }
         
         private void UpdateData(int MCC, int id, string ten, DateTime nc, DateTime th)

@@ -38,9 +38,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BTN_update = new System.Windows.Forms.Button();
+            this.BTN_delete = new System.Windows.Forms.Button();
+            this.BTN_insert = new System.Windows.Forms.Button();
+            this.BTN_reset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -57,9 +58,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(67, 26);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(397, 197);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -68,7 +69,7 @@
             // txt_XL
             // 
             this.txt_XL.Location = new System.Drawing.Point(131, 144);
-            this.txt_XL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_XL.Margin = new System.Windows.Forms.Padding(2);
             this.txt_XL.Name = "txt_XL";
             this.txt_XL.Size = new System.Drawing.Size(120, 24);
             this.txt_XL.TabIndex = 7;
@@ -76,7 +77,7 @@
             // txt_TBC
             // 
             this.txt_TBC.Location = new System.Drawing.Point(131, 105);
-            this.txt_TBC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_TBC.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TBC.Name = "txt_TBC";
             this.txt_TBC.Size = new System.Drawing.Size(241, 24);
             this.txt_TBC.TabIndex = 6;
@@ -84,7 +85,7 @@
             // txt_MBC
             // 
             this.txt_MBC.Location = new System.Drawing.Point(131, 68);
-            this.txt_MBC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MBC.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MBC.Name = "txt_MBC";
             this.txt_MBC.Size = new System.Drawing.Size(120, 24);
             this.txt_MBC.TabIndex = 5;
@@ -92,7 +93,7 @@
             // txt_MNV
             // 
             this.txt_MNV.Location = new System.Drawing.Point(131, 31);
-            this.txt_MNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MNV.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MNV.Name = "txt_MNV";
             this.txt_MNV.Size = new System.Drawing.Size(120, 24);
             this.txt_MNV.TabIndex = 4;
@@ -141,45 +142,61 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(67, 257);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(533, 195);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button3
+            // BTN_update
             // 
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.button3.Location = new System.Drawing.Point(493, 90);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 33);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Cập nhật";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BTN_update.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.BTN_update.Location = new System.Drawing.Point(493, 90);
+            this.BTN_update.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_update.Name = "BTN_update";
+            this.BTN_update.Size = new System.Drawing.Size(107, 33);
+            this.BTN_update.TabIndex = 8;
+            this.BTN_update.Text = "Cập nhật";
+            this.BTN_update.UseVisualStyleBackColor = true;
+            this.BTN_update.Click += new System.EventHandler(this.BTN_update_Click);
             // 
-            // button2
+            // BTN_delete
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.button2.Location = new System.Drawing.Point(493, 144);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 33);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Xóa thông tin";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BTN_delete.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.BTN_delete.Location = new System.Drawing.Point(493, 144);
+            this.BTN_delete.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_delete.Name = "BTN_delete";
+            this.BTN_delete.Size = new System.Drawing.Size(107, 33);
+            this.BTN_delete.TabIndex = 7;
+            this.BTN_delete.Text = "Xóa thông tin";
+            this.BTN_delete.UseVisualStyleBackColor = true;
+            this.BTN_delete.Click += new System.EventHandler(this.BTN_delete_Click);
             // 
-            // button1
+            // BTN_insert
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.button1.Location = new System.Drawing.Point(493, 37);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 33);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Thêm thông tin";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTN_insert.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.BTN_insert.Location = new System.Drawing.Point(493, 37);
+            this.BTN_insert.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_insert.Name = "BTN_insert";
+            this.BTN_insert.Size = new System.Drawing.Size(107, 33);
+            this.BTN_insert.TabIndex = 6;
+            this.BTN_insert.Text = "Thêm thông tin";
+            this.BTN_insert.UseVisualStyleBackColor = true;
+            this.BTN_insert.Click += new System.EventHandler(this.BTN_insert_Click);
+            // 
+            // BTN_reset
+            // 
+            this.BTN_reset.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.BTN_reset.Location = new System.Drawing.Point(493, 181);
+            this.BTN_reset.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_reset.Name = "BTN_reset";
+            this.BTN_reset.Size = new System.Drawing.Size(107, 33);
+            this.BTN_reset.TabIndex = 8;
+            this.BTN_reset.Text = "Xoá";
+            this.BTN_reset.UseVisualStyleBackColor = true;
+            this.BTN_reset.Click += new System.EventHandler(this.BTN_reset_Click);
             // 
             // Bang_cap
             // 
@@ -187,16 +204,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(652, 484);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BTN_reset);
+            this.Controls.Add(this.BTN_update);
+            this.Controls.Add(this.BTN_delete);
+            this.Controls.Add(this.BTN_insert);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Bang_cap";
             this.Text = "Bằng_cấp";
+            this.Load += new System.EventHandler(this.Bang_cap_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -213,11 +232,12 @@
         private System.Windows.Forms.TextBox txt_MNV;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTN_update;
+        private System.Windows.Forms.Button BTN_delete;
+        private System.Windows.Forms.Button BTN_insert;
         private System.Windows.Forms.TextBox txt_XL;
         private System.Windows.Forms.TextBox txt_TBC;
         private System.Windows.Forms.TextBox txt_MBC;
+        private System.Windows.Forms.Button BTN_reset;
     }
 }

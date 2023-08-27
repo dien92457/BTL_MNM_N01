@@ -54,9 +54,9 @@
             this.groupBox2.Controls.Add(this.txt_MNV);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(59, 77);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(393, 132);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
@@ -65,7 +65,7 @@
             // txt_TPB
             // 
             this.txt_TPB.Location = new System.Drawing.Point(131, 85);
-            this.txt_TPB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_TPB.Margin = new System.Windows.Forms.Padding(2);
             this.txt_TPB.Name = "txt_TPB";
             this.txt_TPB.Size = new System.Drawing.Size(241, 24);
             this.txt_TPB.TabIndex = 6;
@@ -73,7 +73,7 @@
             // txt_MPB
             // 
             this.txt_MPB.Location = new System.Drawing.Point(131, 52);
-            this.txt_MPB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MPB.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MPB.Name = "txt_MPB";
             this.txt_MPB.Size = new System.Drawing.Size(120, 24);
             this.txt_MPB.TabIndex = 5;
@@ -113,7 +113,7 @@
             // 
             this.txt_MNV.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MNV.Location = new System.Drawing.Point(131, 21);
-            this.txt_MNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MNV.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MNV.Name = "txt_MNV";
             this.txt_MNV.Size = new System.Drawing.Size(120, 24);
             this.txt_MNV.TabIndex = 21;
@@ -122,7 +122,7 @@
             // 
             this.BTN_update.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.BTN_update.Location = new System.Drawing.Point(485, 123);
-            this.BTN_update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTN_update.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_update.Name = "BTN_update";
             this.BTN_update.Size = new System.Drawing.Size(107, 33);
             this.BTN_update.TabIndex = 26;
@@ -133,8 +133,8 @@
             // BTN_delete
             // 
             this.BTN_delete.Font = new System.Drawing.Font("Times New Roman", 11F);
-            this.BTN_delete.Location = new System.Drawing.Point(485, 172);
-            this.BTN_delete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTN_delete.Location = new System.Drawing.Point(485, 157);
+            this.BTN_delete.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_delete.Name = "BTN_delete";
             this.BTN_delete.Size = new System.Drawing.Size(107, 33);
             this.BTN_delete.TabIndex = 25;
@@ -146,7 +146,7 @@
             // 
             this.BTN_INSERT.Font = new System.Drawing.Font("Times New Roman", 11F);
             this.BTN_INSERT.Location = new System.Drawing.Point(485, 77);
-            this.BTN_INSERT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTN_INSERT.Margin = new System.Windows.Forms.Padding(2);
             this.BTN_INSERT.Name = "BTN_INSERT";
             this.BTN_INSERT.Size = new System.Drawing.Size(107, 33);
             this.BTN_INSERT.TabIndex = 24;
@@ -158,7 +158,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(59, 242);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -190,7 +190,7 @@
             this.Controls.Add(this.BTN_delete);
             this.Controls.Add(this.BTN_INSERT);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Phong_ban";
             this.Text = "Phòng_ban";
             this.Load += new System.EventHandler(this.Phong_ban_Load);
