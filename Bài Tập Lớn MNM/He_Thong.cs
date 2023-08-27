@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Bài_Tập_Lớn_MNM.Backend;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +17,10 @@ namespace Bài_Tập_Lớn_MNM
         public He_Thong()
         {
             InitializeComponent();
+            if( Dang_Nhap_DAO.Instance.phanquyen == 1 )
+            {
+                button1.Enabled = false;
+            }
         }
 
         private Form currentFormBody;
@@ -42,7 +48,8 @@ namespace Bài_Tập_Lớn_MNM
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            OpenFormBody(new Quan_Ly_tai_khoan());
+
+                OpenFormBody(new Quan_Ly_tai_khoan());
         }
 
         private void button2_Click(object sender, EventArgs e)

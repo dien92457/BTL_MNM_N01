@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bài_Tập_Lớn_MNM.Backend;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,25 @@ namespace Bài_Tập_Lớn_MNM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Giao_Dien f1 = new Giao_Dien();
-            f1.Show();
+            try
+            {
+                int mnv = Convert.ToInt32(text_mnv.Text);
+                string pass = text_pass.Text;
+                databasecontrol databasecontrol = new databasecontrol();
+                string query = "SELECT * FROM TaiKhoan WHERE MNV = @MNV AND pass = @pass ";
+                if (databasecontrol.ExecuteQuery(query, new object[] {mnv, pass}).Rows.Count>0)
+                {
+                    Giao_Dien f1 = new Giao_Dien();
+                    f1.Show();
+                    this.Hide();
+                    Dang_Nhap_DAO.Instance.get_type(mnv);
+                }
+                
+
+            } catch
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng!");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -31,6 +49,8 @@ namespace Bài_Tập_Lớn_MNM
                 Application.Exit();
             }
         }
+
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
